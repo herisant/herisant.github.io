@@ -1,86 +1,261 @@
-# 🚀 Fullstack Web Developer Portfolio / Project Showcase
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nama Anda | Fullstack Web Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Fira Code -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-emerald-500 selection:text-slate-950">
 
-<div align="center">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="font-mono text-xl font-bold text-emerald-400">
+                    &lt;DevPortfolio /&gt;
+                </a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#about" class="hover:text-emerald-400 transition">Tentang</a>
+                    <a href="#skills" class="hover:text-emerald-400 transition">Tech Stack</a>
+                    <a href="#projects" class="hover:text-emerald-400 transition">Proyek</a>
+                    <a href="#contact" class="hover:text-emerald-400 transition">Kontak</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="block py-2 hover:text-emerald-400">Tentang</a>
+            <a href="#skills" class="block py-2 hover:text-emerald-400">Tech Stack</a>
+            <a href="#projects" class="block py-2 hover:text-emerald-400">Proyek</a>
+            <a href="#contact" class="block py-2 hover:text-emerald-400">Kontak</a>
+        </div>
+    </nav>
 
-  <p><strong>Hi there! 👋 I'm [Nama Anda], a passionate Fullstack Web Developer who loves building scalable, user-centric web applications from scratch.</strong></p>
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 md:pt-44 md:pb-32 px-4 max-w-6xl mx-auto">
+        <div class="max-w-3xl">
+            <p class="font-mono text-emerald-400 mb-4">Halo, nama saya</p>
+            <h1 class="text-4xl sm:text-6xl font-bold text-white tracking-tight mb-4">
+                Nama Lengkap Anda.
+            </h1>
+            <h2 class="text-3xl sm:text-5xl font-bold text-slate-400 mb-6">
+                Saya membangun aplikasi web dari ujung ke ujung.
+            </h2>
+            <p class="text-slate-400 text-lg leading-relaxed mb-8 max-w-2xl">
+                Saya adalah seorang <span class="text-slate-200 font-semibold">Fullstack Web Developer</span> yang berfokus pada pengembangan arsitektur backend yang skalabel, API yang cepat, serta antarmuka frontend yang responsif dan intuitif.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#projects" class="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-semibold rounded-lg transition">
+                    Lihat Proyek Saya
+                </a>
+                <a href="https://github.com/username-anda" target="_blank" class="px-6 py-3 border border-slate-700 hover:border-emerald-400 text-slate-200 hover:text-emerald-400 font-semibold rounded-lg transition flex items-center gap-2">
+                    <i class="fab fa-github"></i> GitHub Profile
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <p>
-    <a href="https://windaheris.com" target="_blank">🌐 Portfolio</a> •
-    <a href="https://linkedin.com/in/winda-heri-santoso-a93309113" target="_blank">LinkedIn</a> •
-    <a href="mailto:windaheris@gmail.com">Email Me</a>
-  </p>
+    <!-- Tech Stack Section -->
+    <section id="skills" class="py-20 bg-slate-900/50 border-y border-slate-800/80 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2 flex items-center gap-3">
+                <span class="font-mono text-emerald-400 text-xl">01.</span> Tech Stack
+            </h2>
+            <p class="text-slate-400 mb-12">Teknologi yang sehari-hari saya gunakan untuk membangun produk digital.</p>
 
-</div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Frontend -->
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition">
+                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Frontend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">HTML5 / CSS3</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">JavaScript (ES6+)</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">TypeScript</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">React / Next.js</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">Tailwind CSS</span>
+                    </div>
+                </div>
 
----
+                <!-- Backend -->
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition">
+                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Backend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">Node.js / Express</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">PHP / Laravel</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">Python / FastAPI</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">RESTful API</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">GraphQL</span>
+                    </div>
+                </div>
 
-## 🛠️ Tech Stack & Skills
+                <!-- Database & DevOps -->
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition">
+                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Database & Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">MySQL</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">MongoDB</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">Redis</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md font-mono">Docker & Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-Berikut adalah teknologi dan alat yang biasa saya gunakan dalam membangun aplikasi web modern:
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 max-w-6xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2 flex items-center gap-3">
+            <span class="font-mono text-emerald-400 text-xl">02.</span> Proyek Pilihan
+        </h2>
+        <p class="text-slate-400 mb-12">Beberapa aplikasi yang telah saya rancang, bangun, dan deploy.</p>
 
-* **Frontend:** 
-  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-  ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-  ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-  ![Next.js](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
-  ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project Card 1 -->
+            <div class="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between hover:-translate-y-1 transition duration-300">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <i class="far fa-folder-open text-3xl text-emerald-400"></i>
+                        <div class="flex gap-4 text-slate-400">
+                            <a href="https://github.com/username-anda/project-1" target="_blank" class="hover:text-emerald-400" title="Source Code"><i class="fab fa-github text-xl"></i></a>
+                            <a href="#" target="_blank" class="hover:text-emerald-400" title="Live Demo"><i class="fas fa-external-link-alt text-lg"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">SaaS Manajemen Inventaris</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Aplikasi web multi-tenant untuk melacak stok barang secara real-time, lengkap dengan analitik penjualan dan notifikasi otomatis.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 flex flex-wrap gap-2 font-mono text-xs text-emerald-400">
+                    <span>Next.js</span>
+                    <span>•</span>
+                    <span>Node.js</span>
+                    <span>•</span>
+                    <span>PostgreSQL</span>
+                </div>
+            </div>
 
-* **Backend:**
-  ![NodeJS](https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node.js&logoColor=white)
-  ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=white)
-  ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)
-  ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+            <!-- Project Card 2 -->
+            <div class="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between hover:-translate-y-1 transition duration-300">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <i class="far fa-folder-open text-3xl text-emerald-400"></i>
+                        <div class="flex gap-4 text-slate-400">
+                            <a href="https://github.com/username-anda/project-2" target="_blank" class="hover:text-emerald-400" title="Source Code"><i class="fab fa-github text-xl"></i></a>
+                            <a href="#" target="_blank" class="hover:text-emerald-400" title="Live Demo"><i class="fas fa-external-link-alt text-lg"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">E-Commerce & Payment Gateway</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Platform toko online dengan integrasi pembayaran otomatis (Midtrans/Stripe), manajemen ongkos kirim, dan dashboard admin.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 flex flex-wrap gap-2 font-mono text-xs text-emerald-400">
+                    <span>Laravel</span>
+                    <span>•</span>
+                    <span>Vue.js</span>
+                    <span>•</span>
+                    <span>MySQL</span>
+                </div>
+            </div>
 
-* **Database & ORM:**
-  ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-  ![PostgreSQL](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-  ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
+            <!-- Project Card 3 -->
+            <div class="bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between hover:-translate-y-1 transition duration-300">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <i class="far fa-folder-open text-3xl text-emerald-400"></i>
+                        <div class="flex gap-4 text-slate-400">
+                            <a href="https://github.com/username-anda/project-3" target="_blank" class="hover:text-emerald-400" title="Source Code"><i class="fab fa-github text-xl"></i></a>
+                            <a href="#" target="_blank" class="hover:text-emerald-400" title="Live Demo"><i class="fas fa-external-link-alt text-lg"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Real-Time Chat & Task Board</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Alat kolaborasi tim bergaya Kanban dengan fitur obrolan langsung menggunakan WebSockets dan autentikasi berbasis JWT.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-2 flex flex-wrap gap-2 font-mono text-xs text-emerald-400">
+                    <span>React</span>
+                    <span>•</span>
+                    <span>Socket.io</span>
+                    <span>•</span>
+                    <span>MongoDB</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-* **DevOps & Tools:**
-  ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-  ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-  ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-  ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 text-center max-w-2xl mx-auto">
+        <p class="font-mono text-emerald-400 mb-2">03. Langkah Selanjutnya?</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Mari Terhubung</h2>
+        <p class="text-slate-400 mb-8 leading-relaxed">
+            Saat ini saya terbuka untuk peluang kerja penuh waktu (*full-time*), proyek *freelance*, atau sekadar berdiskusi seputar pengembangan web. Jangan ragu untuk menghubungi saya!
+        </p>
+        <a href="mailto:emailanda@contoh.com" class="inline-block px-8 py-4 border border-emerald-400 text-emerald-400 hover:bg-emerald-400/10 font-mono rounded-lg transition">
+            Kirim Email
+        </a>
 
----
+        <!-- Social Links -->
+        <div class="flex justify-center gap-6 mt-12 text-slate-400 text-2xl">
+            <a href="https://github.com/username-anda" target="_blank" class="hover:text-emerald-400 transition"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/username-anda" target="_blank" class="hover:text-emerald-400 transition"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/username-anda" target="_blank" class="hover:text-emerald-400 transition"><i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
 
-## 🌟 Featured Projects
+    <!-- Footer -->
+    <footer class="py-6 text-center text-slate-500 text-sm font-mono border-t border-slate-900">
+        <p>Dibangun dengan Tailwind CSS & di-host di GitHub Pages.</p>
+    </footer>
 
-Berikut adalah beberapa proyek unggulan yang telah saya kembangkan:
+    <!-- Script untuk Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-### 1. 🛒 [Nama Proyek E-Commerce]
-*Aplikasi e-commerce fullstack dengan fitur keranjang belanja, integrasi payment gateway, dan dashboard admin.*
-* **Tech Stack:** Next.js, TypeScript, Tailwind CSS, Node.js, Express, PostgreSQL, Prisma.
-* **Fitur Utama:**
-  * Autentikasi pengguna aman menggunakan JWT & NextAuth.
-  * Integrasi Midtrans/Stripe untuk pembayaran online.
-  * Dashboard admin untuk manajemen produk dan pesanan real-time.
-* 🔗 [Live Demo](https://link-demo.com) | 💻 [Source Code](https://github.com/herisant/project-repo)
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-### 2. 💬 [Nama Proyek Chat App]
-*Aplikasi obrolan real-time berbasis web dengan dukungan ruang obrolan privat dan publik.*
-* **Tech Stack:** React, Node.js, Express, Socket.io, MongoDB.
-* **Fitur Utama:**
-  * Komunikasi real-time menggunakan WebSockets (Socket.io).
-  * Enkripsi pesan sederhana dan penyimpanan riwayat obrolan di MongoDB.
-  * Desain responsif dengan antarmuka yang bersih.
-* 🔗 [Live Demo](https://link-demo.com) | 💻 [Source Code](https://github.com/herisant/project-repo)
-
----
-
-## 📊 GitHub Stats
-
-<div align="left">
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=herisant&show_icons=true&theme=radical" alt="GitHub Stats" />
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=herisant&layout=compact&theme=radical" alt="Top Langs" />
-</div>
-
----
-
-## 📫 Let's Connect!
-
-* **Email:** windaheris@gmail.com
-* **LinkedIn:** [linkedin.com/in/winda-heri-santoso-a93309113](https://linkedin.com/in/winda-heri-santoso-a93309113)
-* **Instagram:** [@heris_santoso](https://instagram.com/heris_santoso)
+        // Tutup menu mobile saat link diklik
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
